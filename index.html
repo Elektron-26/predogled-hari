@@ -1,0 +1,364 @@
+<!doctype html>
+<html lang="sl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>Turistična kmetija Hari · Spodnja Ščavnica, Prlekija</title>
+<meta name="description" content="Domača prleška gibanica iz krušne peči, narezek, nedeljska kosila in praznovanja za do 50 gostov. Turistična kmetija Hari, Spodnja Ščavnica pri Gornji Radgoni.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400;1,9..144,500&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --papir:#F7F1E7;--papir2:#EFE6D6;--bela:#FFFCF6;
+  --gozd:#27402F;--gozd2:#1C3022;--mah:#5E7A55;
+  --vino:#8E2F28;--med:#C9933A;--med-s:#E8C27A;
+  --crnilo:#241E17;--siva:#6A5F52;--crta:rgba(36,30,23,.13);
+  --serif:"Fraunces",Georgia,serif;--sans:"Karla",system-ui,sans-serif;
+  --ease:cubic-bezier(.22,.8,.24,1);color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;overflow-x:clip}
+body{margin:0;background:var(--papir);color:var(--crnilo);font-family:var(--sans);font-size:17.5px;line-height:1.65;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%}
+a{color:inherit}
+.w{max-width:1180px;margin:0 auto;padding:0 max(20px,env(safe-area-inset-left))}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.04;margin:0;letter-spacing:-.015em;font-variation-settings:"opsz" 120}
+h2{font-size:clamp(42px,5.8vw,76px)}
+h2 em,h1 em{font-style:italic;color:var(--vino)}
+p{margin:0}
+.oznaka{display:inline-flex;align-items:center;gap:12px;font-size:12.5px;letter-spacing:.24em;text-transform:uppercase;font-weight:700;color:var(--mah)}
+.oznaka::before{content:"";width:28px;height:1px;background:currentColor}
+.sek{padding:clamp(80px,11vw,150px) 0}
+.lede{font-size:19px;color:var(--siva);max-width:52ch}
+
+/* trak predogled */
+.demo{background:var(--gozd2);color:#E9E1D2;text-align:center;font-size:13px;padding:8px 14px;position:relative;z-index:40}
+.demo b{color:var(--med-s)}
+
+/* glava */
+header{position:fixed;left:0;right:0;z-index:30;transition:background .4s,box-shadow .4s}
+header.on{background:rgba(247,241,231,.93);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);box-shadow:0 1px 0 var(--crta)}
+.hd{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.logo{text-decoration:none;color:#fff;display:flex;flex-direction:column;line-height:1;transition:color .4s}
+.logo b{font-family:var(--serif);font-weight:600;font-size:28px;letter-spacing:.02em}
+.logo small{font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;margin-top:5px;opacity:.85}
+header.on .logo{color:var(--gozd)}
+nav{display:flex;gap:30px;font-size:15px;font-weight:500}
+nav a{text-decoration:none;color:#fff;opacity:.9;transition:color .4s,opacity .2s}
+nav a:hover{opacity:1}
+header.on nav a{color:var(--crnilo)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:54px;padding:0 28px;border-radius:999px;font-weight:700;font-size:16px;text-decoration:none;border:0;cursor:pointer;font-family:inherit;transition:transform .25s var(--ease),background .25s,color .25s,box-shadow .25s}
+.btn svg{width:18px;height:18px}
+.btn-med{background:var(--med);color:#211708;box-shadow:0 12px 30px -14px rgba(201,147,58,.9)}
+.btn-med:hover{background:#D9A24A;transform:translateY(-2px)}
+.btn-svetel{background:rgba(255,255,255,.14);color:#fff;border:1px solid rgba(255,255,255,.45);backdrop-filter:blur(6px)}
+.btn-svetel:hover{background:rgba(255,255,255,.24)}
+.btn-gozd{background:var(--gozd);color:#fff}
+.btn-gozd:hover{background:var(--gozd2);transform:translateY(-2px)}
+.btn-obroba{background:transparent;color:var(--gozd);border:1.5px solid var(--gozd)}
+.hd .btn{min-height:44px;padding:0 20px;font-size:14.5px}
+.btn:focus-visible,a:focus-visible{outline:3px solid var(--med);outline-offset:3px}
+@media(max-width:920px){nav{display:none}}
+
+/* hero */
+.hero{position:relative;min-height:100svh;display:flex;align-items:flex-end;color:#fff;overflow:hidden;background:var(--gozd2)}
+.hero .foto{position:absolute;inset:0}
+.hero .foto img{width:100%;height:100%;object-fit:cover;transform:scale(1.08);animation:zoom 14s var(--ease) forwards}
+@keyframes zoom{to{transform:scale(1)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(20,26,18,.45) 0%,rgba(20,26,18,.05) 30%,rgba(20,26,18,.25) 55%,rgba(16,22,14,.85) 100%)}
+.hero .w{position:relative;z-index:2;width:100%;padding-top:150px;padding-bottom:clamp(48px,8vh,100px)}
+.hero .oznaka{color:var(--med-s)}
+.hero h1{font-size:clamp(46px,min(7.2vw,10.5vh),112px);max-width:14ch;margin:20px 0 22px;text-shadow:0 2px 30px rgba(0,0,0,.25)}
+.hero h1 em{color:var(--med-s)}
+.hero .lede{color:rgba(255,255,255,.88);font-size:19.5px;max-width:46ch;text-shadow:0 1px 14px rgba(0,0,0,.35)}
+.acts{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.beseda{display:inline-block;opacity:0;transform:translateY(26px);filter:blur(6px);animation:pojav 1.1s var(--ease) forwards}
+@keyframes pojav{to{opacity:1;transform:none;filter:none}}
+.znacke{display:flex;flex-wrap:wrap;gap:10px;margin-top:40px}
+.znacke span{font-size:13.5px;font-weight:600;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);backdrop-filter:blur(6px)}
+
+/* trak */
+.trak{background:var(--gozd);color:#EFE6D6;overflow:hidden;padding:22px 0}
+.trak div{display:flex;gap:48px;white-space:nowrap;width:max-content;animation:tece 42s linear infinite;font-family:var(--serif);font-style:italic;font-size:27px}
+.trak span::after{content:"✿";margin-left:48px;color:var(--med-s);font-style:normal;font-size:16px;vertical-align:middle}
+@keyframes tece{to{transform:translateX(-50%)}}
+
+/* uvod */
+.uvod{display:grid;grid-template-columns:6fr 5fr;gap:clamp(40px,7vw,100px);align-items:center}
+.uvod .velik{font-family:var(--serif);font-size:clamp(28px,3.2vw,42px);line-height:1.22;margin-top:22px}
+.uvod .velik em{color:var(--vino)}
+.uvod .lede{margin-top:26px}
+.stevke{display:grid;grid-template-columns:repeat(3,1fr);margin-top:44px;border-top:1px solid var(--crta)}
+.stevke div{padding:22px 0 0}
+.stevke div+div{padding-left:22px;border-left:1px solid var(--crta)}
+.stevke b{display:block;font-family:var(--serif);font-weight:400;font-size:clamp(40px,4.6vw,58px);line-height:1;color:var(--gozd)}
+.stevke small{font-size:13.5px;color:var(--siva);letter-spacing:.04em}
+.uvod-foto{position:relative}
+.uvod-foto .a{aspect-ratio:4/5;border-radius:220px 220px 18px 18px;overflow:hidden}
+.uvod-foto .a img{width:100%;height:100%;object-fit:cover}
+.uvod-foto .b{position:absolute;left:-14%;bottom:-8%;width:52%;aspect-ratio:1;border-radius:18px;overflow:hidden;border:8px solid var(--papir);box-shadow:0 30px 60px -30px rgba(36,30,23,.5)}
+.uvod-foto .b img{width:100%;height:100%;object-fit:cover}
+.pecat{position:absolute;right:-18px;top:30px;width:128px;height:128px;border-radius:50%;background:var(--vino);color:#F7E9DE;display:grid;place-items:center;text-align:center;font-family:var(--serif);font-style:italic;font-size:17px;line-height:1.15;transform:rotate(-10deg);box-shadow:0 20px 40px -18px rgba(142,47,40,.8)}
+@media(max-width:900px){.uvod{grid-template-columns:1fr}.uvod-foto{max-width:440px;margin:30px auto 40px;width:86%}.uvod-foto .b{left:-8%}.pecat{right:-4px;width:108px;height:108px;font-size:15px}}
+
+/* kulinarika */
+.kuh{background:var(--bela);border-block:1px solid var(--crta)}
+.kuh-top{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:end}
+.kuh-top .lede{justify-self:end}
+.mozaik{display:grid;grid-template-columns:5fr 4fr 3fr;grid-template-rows:280px 280px;gap:14px;margin-top:64px}
+.mozaik figure{margin:0;position:relative;overflow:hidden;border-radius:14px;background:var(--papir2)}
+.mozaik img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
+.mozaik figure:hover img{transform:scale(1.05)}
+.mozaik figcaption{position:absolute;left:14px;bottom:12px;font-size:12px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;background:rgba(28,48,34,.75);padding:7px 12px;border-radius:999px;backdrop-filter:blur(4px)}
+.m1{grid-row:1/3}.m4{grid-column:2/4}
+.meni{display:grid;grid-template-columns:1fr 1fr;gap:0 70px;margin-top:70px}
+.meni div{display:flex;align-items:baseline;gap:14px;padding:22px 0;border-bottom:1px solid var(--crta)}
+.meni b{font-family:var(--serif);font-weight:400;font-size:27px;white-space:nowrap}
+.meni i{flex:1;border-bottom:1px dotted rgba(36,30,23,.3);transform:translateY(-6px)}
+.meni span{font-size:14.5px;color:var(--siva);text-align:right}
+.meni .cena{font-family:var(--serif);font-size:24px;color:var(--vino);font-weight:600}
+.opomba{margin-top:22px;font-size:14px;color:var(--siva)}
+@media(max-width:900px){.kuh-top{grid-template-columns:1fr;gap:20px}.kuh-top .lede{justify-self:start}.mozaik{grid-template-columns:1fr 1fr;grid-template-rows:240px 180px 180px;margin-top:44px}.m1{grid-row:auto;grid-column:1/3}.m4{grid-column:1/3}.meni{grid-template-columns:1fr;margin-top:44px}.meni b{font-size:23px;white-space:normal}.meni span{display:none}}
+
+/* praznovanja */
+.praz{background:var(--gozd);color:#EFE6D6;position:relative;overflow:hidden}
+.praz h2 em{color:var(--med-s)}
+.praz .oznaka{color:var(--med-s)}
+.praz .lede{color:#CFC6B4}
+.praz-g{display:grid;grid-template-columns:5fr 6fr;gap:clamp(40px,6vw,90px);align-items:center}
+.priloznosti{display:flex;flex-wrap:wrap;gap:10px;margin:34px 0 38px}
+.priloznosti span{padding:10px 16px;border-radius:999px;border:1px solid rgba(239,230,214,.28);font-size:15px}
+.praz-foto{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.praz-foto figure{margin:0;border-radius:14px;overflow:hidden}
+.praz-foto img{width:100%;height:100%;object-fit:cover}
+.praz-foto .p1{grid-column:1/3;aspect-ratio:16/10}
+.praz-foto .p2,.praz-foto .p3{aspect-ratio:1}
+.praz-info{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:70px}
+.praz-info div{padding:26px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(239,230,214,.14)}
+.praz-info b{display:block;font-family:var(--serif);font-weight:400;font-size:28px;color:#fff;margin-bottom:6px}
+.praz-info p{font-size:15.5px;color:#CFC6B4}
+@media(max-width:900px){.praz-g{grid-template-columns:1fr}.praz-info{grid-template-columns:1fr}}
+
+/* citat */
+.citat{text-align:center}
+.citat blockquote{margin:0 auto;max-width:21ch;font-family:var(--serif);font-size:clamp(34px,5vw,64px);line-height:1.15}
+.citat .b{opacity:.16;transition:opacity .45s}
+.citat .b.on{opacity:1}
+.citat cite{display:block;margin-top:30px;font-style:normal;font-size:13px;letter-spacing:.22em;text-transform:uppercase;color:var(--mah);font-weight:700}
+
+/* letni casi */
+.cas-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:60px}
+.cas{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;color:#fff}
+.cas img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
+.cas:hover img{transform:scale(1.05)}
+.cas::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,26,18,.85))}
+.cas div{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
+.cas small{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--med-s)}
+.cas h3{font-size:30px;margin:6px 0 6px}
+.cas p{font-size:15px;color:rgba(255,255,255,.85)}
+@media(max-width:900px){.cas-g{grid-template-columns:1fr;gap:14px}.cas{aspect-ratio:4/3}}
+
+/* obisk */
+.obisk{background:var(--papir2)}
+.obisk-g{display:grid;grid-template-columns:5fr 6fr;gap:clamp(40px,6vw,80px);align-items:start}
+.kartica{background:var(--bela);border-radius:22px;padding:34px;border:1px solid var(--crta);box-shadow:0 40px 70px -50px rgba(36,30,23,.45)}
+.vrsta{display:flex;gap:16px;align-items:flex-start;padding:16px 0;border-bottom:1px solid var(--crta)}
+.vrsta:last-of-type{border-bottom:0}
+.vrsta .ik{flex:none;width:42px;height:42px;border-radius:50%;background:var(--papir2);display:grid;place-items:center;color:var(--gozd)}
+.vrsta .ik svg{width:20px;height:20px}
+.vrsta small{display:block;font-size:12.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--siva);font-weight:700}
+.vrsta a,.vrsta span{font-size:18px;text-decoration:none;font-weight:500}
+.kartica .acts{margin-top:24px}
+.kartica .btn{flex:1}
+.zemljevid{border-radius:22px;overflow:hidden;border:1px solid var(--crta);aspect-ratio:4/3;background:var(--papir)}
+.zemljevid iframe{width:100%;height:100%;border:0;display:block}
+.dodatno{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px}
+.dodatno span{font-size:14px;padding:8px 14px;border-radius:999px;background:var(--bela);border:1px solid var(--crta)}
+@media(max-width:900px){.obisk-g{grid-template-columns:1fr}.kartica{padding:24px 20px}}
+
+footer{background:var(--gozd2);color:#CFC6B4;padding:70px 0 120px}
+.ft{display:grid;grid-template-columns:2fr 1fr 1fr;gap:40px}
+.ft h3{color:#fff;font-size:40px}
+.ft strong{display:block;color:#fff;font-size:12.5px;letter-spacing:.18em;text-transform:uppercase;margin-bottom:12px}
+.ft a{display:block;text-decoration:none;margin-bottom:6px}
+.ft a:hover{color:#fff}
+.ft-sp{margin-top:50px;padding-top:22px;border-top:1px solid rgba(239,230,214,.14);font-size:13px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:800px){.ft{grid-template-columns:1fr}}
+
+.mob{position:fixed;left:12px;right:12px;bottom:max(12px,env(safe-area-inset-bottom));z-index:35;display:none;gap:10px;transition:opacity .3s}
+.mob .btn{flex:1;box-shadow:0 14px 34px -12px rgba(0,0,0,.45);min-height:52px}
+@media(max-width:760px){.mob{display:flex}.mob.skrit{opacity:0;pointer-events:none}}
+
+.zav{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
+.zav.on{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.zav,.beseda{opacity:1!important;transform:none!important;filter:none!important}}
+</style>
+</head>
+<body>
+
+<div class="demo" id="demo"><b>Predogled</b> · brezplačen osnutek nove strani, pripravil Spletni Atelje</div>
+
+<header id="glava">
+  <div class="w hd">
+    <a class="logo" href="#"><b>Hari</b><small>Turistična kmetija</small></a>
+    <nav><a href="#kulinarika">Kulinarika</a><a href="#praznovanja">Praznovanja</a><a href="#letni-casi">Skozi leto</a><a href="#obisk">Obisk</a></nav>
+    <a class="btn btn-med" href="tel:+38631837321">Pokliči</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="foto"><img src="img/hisa.jpg" alt="Turistična kmetija Hari v Spodnji Ščavnici"></div>
+  <div class="w">
+    <div class="oznaka">Spodnja Ščavnica · Prlekija</div>
+    <h1 id="naslov">Gibanica iz krušne peči <em>in razgled na gorice.</em></h1>
+    <p class="lede">Domač narezek, tünka, kruh iz krušne peči in dobra vinska kapljica. Nedeljska kosila in praznovanja za do 50 gostov, med vinogradi nad Gornjo Radgono.</p>
+    <div class="acts">
+      <a class="btn btn-med" href="tel:+38631837321"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>031 837 321</a>
+      <a class="btn btn-svetel" href="#praznovanja">Praznovanja in kosila</a>
+    </div>
+    <div class="znacke"><span>Odprto vse leto</span><span>50 sedežev</span><span>Terasa z razgledom</span><span>Otroško igrišče</span></div>
+  </div>
+</section>
+
+<div class="trak" aria-hidden="true"><div>
+  <span>prleška gibanica iz krušne peči</span><span>domač narezek in tünka</span><span>nedeljska kosila</span><span>praznovanja do 50 gostov</span><span>terasa z razgledom</span><span>izbrana vinska kapljica</span>
+  <span>prleška gibanica iz krušne peči</span><span>domač narezek in tünka</span><span>nedeljska kosila</span><span>praznovanja do 50 gostov</span><span>terasa z razgledom</span><span>izbrana vinska kapljica</span>
+</div></div>
+
+<section class="sek">
+  <div class="w uvod">
+    <div class="zav">
+      <div class="oznaka">Pri nas</div>
+      <h2 style="margin-top:20px">Preprosto, domače <em>in povezano z naravo.</em></h2>
+      <p class="velik">Ko se zjutraj zakuri krušna peč, cela hiša diši po <em>sveži prleški gibanici</em> in domačem kruhu.</p>
+      <p class="lede">Na naši kmetiji v Spodnji Ščavnici gostom postrežemo z jedmi, ki jih pripravljamo iz domačih sestavin: narezek, tünka, domače klobase in gibanica. Jeseni se vinogradi okoli nas obarvajo zlato, pozimi pa pri nas diši po kolinah. Pridite na oddih, kosilo ali praznovanje z najdražjimi.</p>
+      <div class="stevke">
+        <div><b data-st="50">50</b><small>sedežev za goste</small></div>
+        <div><b data-st="12">12</b><small>ha kmetije</small></div>
+        <div><b data-st="365">365</b><small>m nadmorske višine</small></div>
+      </div>
+    </div>
+    <div class="uvod-foto zav">
+      <div class="a"><img src="img/pec.jpg" alt="Gibanice iz krušne peči"></div>
+      <div class="b"><img src="img/vino.jpg" alt="Domače vino"></div>
+      <div class="pecat">iz krušne<br>peči</div>
+    </div>
+  </div>
+</section>
+
+<section class="sek kuh" id="kulinarika">
+  <div class="w">
+    <div class="kuh-top zav">
+      <div><div class="oznaka">Kulinarika</div><h2 style="margin-top:20px">Iz naše <em>kuhinje in kleti.</em></h2></div>
+      <p class="lede">Vse, kar pride na mizo, je domače. Za večje skupine in nedeljska kosila nas pokličite vnaprej, da pripravimo vse po vaših željah.</p>
+    </div>
+    <div class="mozaik zav">
+      <figure class="m1"><img src="img/narezek.jpg" alt="Domač narezek"><figcaption>Domač narezek</figcaption></figure>
+      <figure class="m2"><img src="img/gibanica.jpg" alt="Prleška gibanica"><figcaption>Prleška gibanica</figcaption></figure>
+      <figure class="m3"><img src="img/kruh.jpg" alt="Kruh iz krušne peči"><figcaption>Kruh iz peči</figcaption></figure>
+      <figure class="m4"><img src="img/klobase.jpg" alt="Domače klobase"><figcaption>Domače klobase</figcaption></figure>
+    </div>
+    <div class="meni">
+      <div class="zav"><b>Prleška gibanica</b><i></i><span>iz krušne peči</span></div>
+      <div class="zav"><b>Domač narezek</b><i></i><span>s tünko in domačim kruhom</span></div>
+      <div class="zav"><b>Obložen kruh</b><i></i><span>za malico na terasi</span></div>
+      <div class="zav"><b>Domače klobase</b><i></i><span>v času kolin</span></div>
+      <div class="zav"><b>Vinska kapljica</b><i></i><span>k narezku in gibanici</span></div>
+      <div class="zav"><b>Nedeljsko kosilo</b><i></i><span class="cena">15 €</span></div>
+    </div>
+    <p class="opomba">Nedeljska kosila pripravljamo po predhodnem naročilu. Cene so informativne in jih skupaj uredimo pred objavo strani.</p>
+  </div>
+</section>
+
+<section class="sek praz" id="praznovanja">
+  <div class="w">
+    <div class="praz-g">
+      <div class="zav">
+        <div class="oznaka">Praznovanja</div>
+        <h2 style="margin-top:20px">Vaš poseben dan, <em>v miru med griči.</em></h2>
+        <p class="lede" style="margin-top:24px">Pri nas lahko praznujete z vsemi, ki so vam dragi. Poskrbimo za lepo pripravljene mize, domačo hrano in prostor, kjer se lahko brezskrbno družite.</p>
+        <div class="priloznosti"><span>Rojstni dnevi</span><span>Krsti</span><span>Obhajila</span><span>Birme</span><span>Poroke</span><span>Obletnice</span><span>Družinska srečanja</span><span>Lovski krsti</span></div>
+        <a class="btn btn-med" href="tel:+38631837321">Pokličite za termin</a>
+      </div>
+      <div class="praz-foto zav">
+        <figure class="p1"><img src="img/dvorana.jpg" alt="Pripravljena dvorana"></figure>
+        <figure class="p2"><img src="img/pogostitev.jpg" alt="Pogostitev"></figure>
+        <figure class="p3"><img src="img/narezek2.jpg" alt="Narezek za goste"></figure>
+      </div>
+    </div>
+    <div class="praz-info">
+      <div class="zav"><b>Do 50 gostov</b><p>Dvorana s pogrnjenimi mizami, pripravljena po vaši želji: praznično, lovsko ali v naravnem slogu.</p></div>
+      <div class="zav"><b>Domač meni</b><p>Narezek, gibanica in kosilo. Meni sestavimo skupaj, glede na priložnost in število gostov.</p></div>
+      <div class="zav"><b>Terasa z razgledom</b><p>Ob lepem vremenu se druženje preseli na teraso, s pogledom na vinograde in sončni zahod.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sek citat">
+  <div class="w">
+    <blockquote id="citat">Razgled in domač narezek, to je popoln recept za oddih po dolgem dnevu.</blockquote>
+    <cite>Turistična kmetija Hari</cite>
+  </div>
+</section>
+
+<section class="sek" id="letni-casi" style="padding-top:0">
+  <div class="w">
+    <div class="zav" style="max-width:720px"><div class="oznaka">Skozi leto</div><h2 style="margin-top:20px">Vsak letni čas <em>ima svoj okus.</em></h2></div>
+    <div class="cas-g">
+      <article class="cas zav"><img src="img/koline.jpg" alt="Koline"><div><small>Pozimi</small><h3>Koline in pečenice</h3><p>Domače klobase in pečenice, ko zunaj zebe in se kuri peč.</p></div></article>
+      <article class="cas zav"><img src="img/zima.jpg" alt="Vinogradi pozimi"><div><small>Vse leto</small><h3>Razgled na gorice</h3><p>Griči nad Ščavnico, ki so lepi v vsakem letnem času, jeseni pa najlepši.</p></div></article>
+      <article class="cas zav"><img src="img/okras.jpg" alt="Praznična okrasitev"><div><small>Prazniki</small><h3>Martinovanje in prazniki</h3><p>Krst mošta z domačim muzikantom in praznično okrašeni kotički.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="sek obisk" id="obisk">
+  <div class="w">
+    <div class="zav" style="max-width:720px;margin-bottom:50px"><div class="oznaka">Obisk</div><h2 style="margin-top:20px">Pokličite nas <em>in se vidimo.</em></h2></div>
+    <div class="obisk-g">
+      <div class="kartica zav">
+        <div class="vrsta"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg></span><div><small>Telefon</small><a href="tel:+38631837321">031 837 321</a><br><a href="tel:+38625648346" style="font-size:15px;color:var(--siva)">02 564 83 46</a></div></div>
+        <div class="vrsta"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span><div><small>E-pošta</small><a href="mailto:turisticna.kmetija.hari@gmail.com">turisticna.kmetija.hari@gmail.com</a></div></div>
+        <div class="vrsta"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></span><div><small>Naslov</small><span>Spodnja Ščavnica 42, 9250 Gornja Radgona</span></div></div>
+        <div class="vrsta"><span class="ik"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span><div><small>Odprto</small><span>Vse leto, obisk in kosila po predhodnem dogovoru</span></div></div>
+        <div class="acts"><a class="btn btn-gozd" href="tel:+38631837321">Pokliči</a><a class="btn btn-obroba" href="mailto:turisticna.kmetija.hari@gmail.com?subject=Povpra%C5%A1evanje%20s%20spletne%20strani">Pošlji e-pošto</a></div>
+        <div class="dodatno"><span>Govorimo nemško, angleško in hrvaško</span><span>Otroško igrišče</span><span>Pohodne poti</span></div>
+      </div>
+      <div class="zemljevid zav"><iframe loading="lazy" title="Zemljevid" src="https://www.google.com/maps?q=Spodnja+%C5%A0%C4%8Davnica+42,+Gornja+Radgona&output=embed"></iframe></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="w">
+    <div class="ft">
+      <div><h3>Turistična kmetija Hari</h3><p style="margin-top:12px;max-width:34ch">Domača hrana, praznovanja in razgled na gorice v Spodnji Ščavnici pri Gornji Radgoni.</p></div>
+      <div><strong>Kontakt</strong><a href="tel:+38631837321">031 837 321</a><a href="mailto:turisticna.kmetija.hari@gmail.com">E-pošta</a><a href="https://www.facebook.com/profile.php?id=61556416203934" target="_blank" rel="noopener">Facebook</a></div>
+      <div><strong>Na strani</strong><a href="#kulinarika">Kulinarika</a><a href="#praznovanja">Praznovanja</a><a href="#obisk">Obisk</a></div>
+    </div>
+    <div class="ft-sp"><span>© 2026 Turistična kmetija Hari</span><span>Predogled: Spletni Atelje</span></div>
+  </div>
+</footer>
+
+<div class="mob" id="mob"><a class="btn btn-gozd" href="tel:+38631837321">Pokliči</a><a class="btn btn-med" href="mailto:turisticna.kmetija.hari@gmail.com">Piši nam</a></div>
+
+<script>
+const $=id=>document.getElementById(id);
+// naslov po besedah
+const h=$('naslov');let n=0;h.innerHTML=h.innerHTML.replace(/(<em>|<\/em>)|([^\s<]+)/g,(m,t,w)=>t?t:`<span class="beseda" style="animation-delay:${.2+(n++)*.11}s">${w}</span>`);
+// citat
+const q=$('citat');q.innerHTML=q.textContent.split(' ').map(w=>`<span class="b">${w}</span>`).join(' ');const qb=[...q.querySelectorAll('.b')];
+// stevke
+function stej(el){const k=+el.dataset.st;let t0=null;const f=t=>{t0??=t;const p=Math.min(1,(t-t0)/1400);el.textContent=Math.round(k*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)};requestAnimationFrame(f)}
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){vklop(e.target);io.unobserve(e.target)}}),{threshold:0,rootMargin:'0px 0px -8% 0px'});
+function vklop(z){if(z.classList.contains('on'))return;z.classList.add('on');z.querySelectorAll('[data-st]').forEach(stej)}
+document.querySelectorAll('.zav').forEach(z=>io.observe(z));
+const glava=$('glava'),demo=$('demo'),mob=$('mob'),obisk=$('obisk');
+function tick(){const y=scrollY,vh=innerHeight;glava.classList.toggle('on',y>40);glava.style.top=y>40?'0px':demo.offsetHeight+'px';
+  const r=q.getBoundingClientRect(),p=Math.min(1,Math.max(0,(vh*.85-r.top)/(vh*.55)));qb.forEach((b,i)=>b.classList.toggle('on',i<p*qb.length));
+  const o=obisk.getBoundingClientRect();mob.classList.toggle('skrit',y<vh*.5||(o.top<vh&&o.bottom>0));
+  document.querySelectorAll('.zav:not(.on)').forEach(z=>{if(z.getBoundingClientRect().top<vh*.96)vklop(z)})}
+addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick();
+</script>
+</body>
+</html>
