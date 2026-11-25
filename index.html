@@ -157,14 +157,15 @@ header.on nav a{color:var(--crnilo)}
 @media(max-width:900px){.nar-top{grid-template-columns:1fr;gap:20px}.nar-g{grid-template-columns:1fr 1fr;grid-template-rows:300px 220px 220px;margin-top:40px}.n1{grid-column:1/3;grid-row:auto}}
 
 /* letni casi */
-.cas-g{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:60px}
+.cas-g{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:60px}
+@media(max-width:1200px) and (min-width:901px){.cas-g{grid-template-columns:repeat(2,1fr)}}
 .cas{position:relative;border-radius:18px;overflow:hidden;aspect-ratio:3/4;color:#fff}
 .cas img{width:100%;height:100%;object-fit:cover;transition:transform 1.4s var(--ease)}
 .cas:hover img{transform:scale(1.05)}
 .cas::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(20,26,18,.85))}
 .cas div{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
 .cas small{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--med-s)}
-.cas h3{font-size:30px;margin:6px 0 6px}
+.cas h3{font-size:27px;margin:6px 0 6px}
 .cas p{font-size:15px;color:rgba(255,255,255,.85)}
 @media(max-width:900px){.cas-g{grid-template-columns:1fr;gap:14px}.cas{aspect-ratio:4/3}}
 
@@ -334,6 +335,7 @@ footer{background:var(--gozd2);color:#CFC6B4;padding:70px 0 120px}
       <article class="cas zav"><img src="img/koline.jpg" alt="Koline"><div><small>Pozimi</small><h3>Koline in pečenice</h3><p>Domače klobase in pečenice, ko zunaj zebe in se kuri peč.</p></div></article>
       <article class="cas zav"><img src="img/zahod-klopotec.jpg" alt="Klopotec ob sončnem zahodu"><div><small>Jeseni</small><h3>Trgatev in klopotci</h3><p>Ko grozdje dozori, se po gričih nad Ščavnico oglasijo klopotci, večeri pa so zlati.</p></div></article>
       <article class="cas zav"><img src="img/okras.jpg" alt="Praznična okrasitev"><div><small>Prazniki</small><h3>Martinovanje in prazniki</h3><p>Krst mošta z domačim muzikantom in praznično okrašeni kotički.</p></div></article>
+      <article class="cas zav"><img src="img/foto-koticek.avif" alt="Božični foto kotiček z razgledom na vinograde"><div><small>December</small><h3>Božični foto kotiček</h3><p>Klop iz palet, smrečje in lučke z razgledom na vinograde. Za vašo praznično fotografijo.</p></div></article>
     </div>
   </div>
 </section>
