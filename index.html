@@ -203,6 +203,16 @@ footer{background:var(--gozd2);color:#CFC6B4;padding:70px 0 120px}
 .zav{opacity:0;transform:translateY(36px);transition:opacity 1s var(--ease),transform 1s var(--ease)}
 .zav.on{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}.zav,.beseda{opacity:1!important;transform:none!important;filter:none!important}}
+/* povecava fotografij */
+.cas,.mozaik figure,.nar-g figure,.praz-foto figure,.uvod-foto .a,.uvod-foto .b{cursor:zoom-in}
+.lb{position:fixed;inset:0;z-index:100;background:rgba(16,22,14,.94);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .3s}
+.lb.on{opacity:1;pointer-events:auto}
+.lb img{max-width:92vw;max-height:84vh;border-radius:10px;box-shadow:0 30px 80px rgba(0,0,0,.5);object-fit:contain}
+.lb p{position:absolute;left:0;right:0;bottom:max(18px,env(safe-area-inset-bottom));text-align:center;color:#EFE6D6;font-size:15px;margin:0;padding:0 70px}
+.lb button{position:absolute;border:0;background:rgba(255,255,255,.12);color:#fff;width:52px;height:52px;border-radius:50%;font-size:26px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.lb button:hover{background:rgba(255,255,255,.25)}
+.lb .x{top:18px;right:18px}.lb .l{left:18px;top:50%;transform:translateY(-50%)}.lb .d{right:18px;top:50%;transform:translateY(-50%)}
+@media(max-width:600px){.lb .l,.lb .d{top:auto;bottom:60px;transform:none}.lb img{max-height:72vh}}
 </style>
 </head>
 <body>
@@ -387,6 +397,17 @@ function tick(){const y=scrollY,vh=innerHeight;glava.classList.toggle('on',y>40)
   const o=obisk.getBoundingClientRect();mob.classList.toggle('skrit',y<vh*.5||(o.top<vh&&o.bottom>0));
   document.querySelectorAll('.zav:not(.on)').forEach(z=>{if(z.getBoundingClientRect().top<vh*.96)vklop(z)})}
 addEventListener('scroll',tick,{passive:true});addEventListener('resize',tick);tick();
+</script>
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Povečana fotografija"><button class="x" aria-label="Zapri">&times;</button><button class="l" aria-label="Prejšnja">&#8249;</button><img alt=""><button class="d" aria-label="Naslednja">&#8250;</button><p></p></div>
+<script>
+(()=>{const lb=document.getElementById('lb'),li=lb.querySelector('img'),lp=lb.querySelector('p');const sl=[...document.querySelectorAll('.cas img,.mozaik img,.nar-g img,.praz-foto img,.uvod-foto img')];let i=0;
+function pokazi(k){i=(k+sl.length)%sl.length;li.src=sl[i].src;li.alt=sl[i].alt;lp.textContent=sl[i].alt}
+sl.forEach((s,k)=>(s.closest('article,figure,.a,.b')||s).addEventListener('click',()=>{pokazi(k);lb.classList.add('on');document.body.style.overflow='hidden'}));
+function zapri(){lb.classList.remove('on');document.body.style.overflow=''}
+lb.querySelector('.x').onclick=zapri;lb.querySelector('.l').onclick=e=>{e.stopPropagation();pokazi(i-1)};lb.querySelector('.d').onclick=e=>{e.stopPropagation();pokazi(i+1)};
+lb.addEventListener('click',e=>{if(e.target===lb)zapri()});
+addEventListener('keydown',e=>{if(!lb.classList.contains('on'))return;if(e.key==='Escape')zapri();if(e.key==='ArrowLeft')pokazi(i-1);if(e.key==='ArrowRight')pokazi(i+1)});
+let x0=null;lb.addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});lb.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)pokazi(i+(dx<0?1:-1));x0=null})})();
 </script>
 </body>
 </html>
